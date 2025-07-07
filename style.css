@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+
+  font-family:'Quicksand',sans-serif;
+
+  background:linear-gradient(to right,#1f0036, #3a005f, #610094);
+
+  color:#fff; overflow-x:hidden; min-height:100vh;
+
+  display:flex; justify-content:center; align-items:center;
+
+  text-align:center; position:relative;
+
+}
+
+.container {
+
+  background:rgba(255,255,255,0.08); border:2px solid rgba(255,255,255,0.2);
+
+  backdrop-filter:blur(12px); padding:2rem; border-radius:20px;
+
+  max-width:90%; width:400px; animation:fadeIn 2s ease-in-out;
+
+}
+
+h1.glow {
+
+  font-family:'Pacifico',cursive; font-size:2rem;
+
+  color:#ffd6ff; text-shadow:0 0 8px #ff8ae2, 0 0 16px #ffb3ec;
+
+}
+
+.profile-pic {
+
+  width:120px; height:120px; object-fit:cover;
+
+  border-radius:50%; border:3px solid #ffb3ec;
+
+  box-shadow:0 0 12px #ff8ae2; margin-bottom:1rem;
+
+}
+
+p { margin-top:1rem; font-size:1rem; line-height:1.4; }
+
+button {
+
+  margin-top:1.5rem; background:#ff8ae2; color:#2b0031;
+
+  padding:0.6rem 1.2rem; border:none; border-radius:25px;
+
+  font-size:0.9rem; font-weight:bold; cursor:pointer;
+
+  box-shadow:0 0 12px #ffb3ec; transition:all 0.3s ease;
+
+}
+
+button:hover { background:#ffc6f4; transform:scale(1.02); }
+
+.stars { position:fixed; width:100%; height:100%; background:transparent; z-index:-1; }
+
+@keyframes fadeIn {
+
+  from { opacity:0; transform:translateY(30px); }
+
+  to   { opacity:1; transform:translateY(0); }
+
+}
+
+/* Confetti canvas fills screen */
+
+#confetti-canvas { position:fixed; top:0; left:0; pointer-events:none; }
+
+/* Mobile tweaks */
+
+@media(max-width:480px) {
+
+  h1.glow { font-size:1.6rem; }
+
+  .profile-pic { width:100px; height:100px; }
+
+  button { font-size:0.8rem; padding:0.5rem 1rem; }
+
+}
